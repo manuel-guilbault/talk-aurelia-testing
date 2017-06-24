@@ -1,0 +1,11 @@
+<template>
+  <button type.bind="type" class="btn btn-secondary" click.delegate="tryRunTask()">
+    <i show.bind="isExecuting" class="fa fa-spinner fa-spin"></i>
+    <span hide.bind="isExecuting">
+      <slot name="icon">
+        <i class="fa fa-check"></i>
+      </slot>
+    </span>
+    <slot></slot>
+  </button>
+</template>

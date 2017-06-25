@@ -38,6 +38,12 @@
     "displayName": "Karma",
     "source": "test/unit/**/*.ts"
   },
+  "e2eTestRunner": {
+    "id": "protractor",
+    "displayName": "Protractor",
+    "source": "test/e2e/src/**/*.ts",
+    "output": "test/e2e/dist/"
+  },
   "paths": {
     "root": "src",
     "resources": "resources",

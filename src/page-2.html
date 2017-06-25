@@ -1,0 +1,21 @@
+<template>
+  <form submit.delegate="addValue()">
+    <div class="input-group">
+      <input type="text" class="form-control" value.bind="newValue">
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-secondary">
+          <i class="fa fa-plus"></i>
+        </button>
+      </span>
+    </div>
+  </form>
+
+  <ul class="list-group">
+    <li repeat.for="value of values" class="list-group-item justify-content-between">
+      ${value}
+      <button type="button" class="btn btn-link" click.delegate="removeValue($index)">
+        <i class="fa fa-times"></i>
+      </button>
+    </li>
+  </ul>
+</template>

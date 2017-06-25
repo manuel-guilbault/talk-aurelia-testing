@@ -1,3 +1,8 @@
 <template>
-  <async-button task.call="executeAsyncTask()">Execute</async-button>
+  <require from="./nav-bar.html"></require>
+  
+  <section class="container">
+    <nav-bar router.bind="router"></nav-bar>
+    <router-view></router-view>
+  </section>
 </template>

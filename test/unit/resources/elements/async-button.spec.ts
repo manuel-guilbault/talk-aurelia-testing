@@ -30,15 +30,16 @@ describe('AsyncButton custom element', () => {
   }
 
   function getIcon() {
-    return component.element.querySelector('i.fa-check');
+    return component.element.querySelector('i.fa-play');
   }
 
   function getSpinner() {
     return component.element.querySelector('i.fa-spinner');
   }
 
-  function isHidden(element: Element) {
-    return window.getComputedStyle(element).display === 'none'
+  function isHidden(element: Element|null) {
+    return element === null
+      || window.getComputedStyle(element).display === 'none'
       || (element.parentElement !== null && isHidden(element.parentElement));
   }
 

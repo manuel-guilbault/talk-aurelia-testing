@@ -1,6 +1,6 @@
 import { valueConverter } from 'aurelia-framework';
 
-@valueConverter('upper-case')
+@valueConverter('upperCase')
 export class UppercaseValueConverter {
 
   toView(value: string) {
